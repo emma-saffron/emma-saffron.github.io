@@ -50,31 +50,58 @@
     </header>
 
     <main class="pt-20"> <!-- Padding to account for fixed header -->
-        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Developer based documentation samples</h2>
-            <p>Conversational Analytics is a chat-with-your-data feature that is powered by <a href="https://cloud.google.com/gemini/docs/overview">Gemini for Google Cloud</a>. Conversational Analytics empowers users with no expertise in business intelligence to go beyond static dashboards and ask data-related questions in regular, natural (conversational) language. Conversational Analytics is available in Looker (Google Cloud core), Looker (original) instances, and within Looker Studio as part of a Looker Studio Pro subscription.</p>
-            <p>The following sample conversation shows how a user can interact with Conversational Analytics in a natural, back-and-forth way. In this example, the user asks the following question: "Can you plot monthly sales of hot drinks versus smoothies for 2023, and highlight the top selling month for each type of drink?" Conversational Analytics responds by generating a line graph that displays the monthly sales of hot drinks and smoothies for 2023, highlighting July as the month with the highest sales for both categories.</p>
-            <p><img alt="Conversational Analytics chat that includes a line graph of monthly sales of hot drinks and smoothies in 2023, with July highlighted." class="screenshot" data-modal-dialog-id="ca-example-filled" src="/static/looker/docs/studio/images/ca-example-filled.png" width="400">
-            <devsite-lightbox id="ca-example-filled">
-            <img alt="Conversational Analytics chat that includes a line graph of monthly sales of hot drinks and smoothies in 2023, with July highlighted." src="/static/looker/docs/studio/images/ca-example-filled.png"/>s
-            </devsite-lightbox></img></p>
-            <p>As this sample conversation illustrates, Conversational Analytics interprets natural language requests, including multi-part questions that use common terms like "sales" and "hot drinks," without requiring users to specify exact database field names (like <code dir="ltr" translate="no">Total monthly drink sales</code>) or define filter conditions (like <code dir="ltr" translate="no">type of beverage = hot</code>). Conversational Analytics describes its key findings, explains its reasoning, and provides an answer that includes text and, where appropriate, a chart. To encourage deeper analysis, Conversational Analytics may also suggest follow-up questions.</p>
-            <p><a href="https://cloud.google.com/gemini/docs/discover/data-governance" track-metadata-end-goal="how-gemini-uses-data" track-metadata-position="body" track-name="dataGovernanceLink" track-type="commonIncludes">Learn how and when Gemini
-                for Google Cloud uses your data</a>.
-            As an early-stage technology, Gemini for Google Cloud products can
-            generate output that seems plausible but is factually incorrect. We recommend that you validate
-            all output from Gemini for Google Cloud products before you use it. For more
-            information, see
-            <a href="https://cloud.google.com/gemini/docs/discover/responsible-ai" track-metadata-end-goal="gemini-responsible-ai" track-metadata-position="body" track-name="raiLink" track-type="commonIncludes">Gemini for Google Cloud and responsible AI</a>.</p>
-            <h2 data-text="Key features" id="key-features" tabindex="-1">Key features</h2>
-            <p>Conversational Analytics includes the following key features:</p>
-            <ul>
-            <li><strong>Use Conversational Analytics in Looker</strong>: Access <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker">Conversational Analytics in Looker</a> to ask natural language questions about your Looker Explore data within a Looker (original) instance or a Looker (Google Cloud core) instance.</li>
-            <li><strong>Use Conversational Analytics in Looker Studio</strong>: Access <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker-studio">Conversational Analytics in Looker Studio</a> to ask natural language questions about data from <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker-studio#supported-data-sources">supported data sources</a>. Requires a Looker Studio Pro subscription.</li>
-            <li><strong>Create and converse with data agents</strong>: With <a href="https://cloud.google.com/looker/docs/studio/conversational-data-agents">data agents</a>, you can customize the AI-powered data querying agent by providing context and instructions that are specific to your data, which helps Conversational Analytics generate more accurate and contextually relevant responses.</li>
-            <li><strong>Enable advanced analytics with the Code Interpreter</strong>: The <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-code-interpreter">Code Interpreter</a> within Conversational Analytics translates your natural language questions into Python code and executes that code. Compared to standard SQL-based queries, the Code Interpreter's use of Python enables more complex analysis and visualizations.</li>
-            </ul>
-            <p><a name="before_you_begin"> </a>
 
+        <section id="documentation" class="py-16 md:py-24 px-6 md:px-12 bg-white">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Documentation Samples</h2>
+
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100 mb-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Conversational Analytics: Query your data in natural language</h3>
+                    <p>Conversational Analytics is a chat-with-your-data feature that is powered by <a href="https://cloud.google.com/gemini/docs/overview">Gemini for Google Cloud</a>. Conversational Analytics empowers users with no expertise in business intelligence to go beyond static dashboards and ask data-related questions in regular, natural (conversational) language. Conversational Analytics is available in Looker (Google Cloud core), Looker (original) instances, and within Looker Studio as part of a Looker Studio Pro subscription.</p>
+                    <p>The following sample conversation shows how a user can interact with Conversational Analytics in a natural, back-and-forth way. In this example, the user asks the following question: "Can you plot monthly sales of hot drinks versus smoothies for 2023, and highlight the top selling month for each type of drink?" Conversational Analytics responds by generating a line graph that displays the monthly sales of hot drinks and smoothies for 2023, highlighting July as the month with the highest sales for both categories.</p>
+                    <img alt="Conversational Analytics chat that includes a line graph of monthly sales of hot drinks and smoothies in 2023, with July highlighted." src="https://github.com/emma-saffron/emma-saffron.github.io/blob/main/ca-example-filled.png?raw=true"></p>
+                    <p>As this sample conversation illustrates, Conversational Analytics interprets natural language requests, including multi-part questions that use common terms like "sales" and "hot drinks," without requiring users to specify exact database field names (like <code dir="ltr" translate="no">Total monthly drink sales</code>) or define filter conditions (like <code dir="ltr" translate="no">type of beverage = hot</code>). Conversational Analytics describes its key findings, explains its reasoning, and provides an answer that includes text and, where appropriate, a chart. To encourage deeper analysis, Conversational Analytics may also suggest follow-up questions.</p>
+                
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Key features</h4>
+                    <p>Conversational Analytics includes the following key features:</p>
+                    <ul>
+                    <li><strong>Use Conversational Analytics in Looker</strong>: Access <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker">Conversational Analytics in Looker</a> to ask natural language questions about your Looker Explore data within a Looker (original) instance or a Looker (Google Cloud core) instance.</li>
+                    <li><strong>Use Conversational Analytics in Looker Studio</strong>: Access <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker-studio">Conversational Analytics in Looker Studio</a> to ask natural language questions about data from <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker-studio#supported-data-sources">supported data sources</a>. Requires a Looker Studio Pro subscription.</li>
+                    <li><strong>Create and converse with data agents</strong>: With <a href="https://cloud.google.com/looker/docs/studio/conversational-data-agents">data agents</a>, you can customize the AI-powered data querying agent by providing context and instructions that are specific to your data, which helps Conversational Analytics generate more accurate and contextually relevant responses.</li>
+                    <li><strong>Enable advanced analytics with the Code Interpreter</strong>: The <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-code-interpreter">Code Interpreter</a> within Conversational Analytics translates your natural language questions into Python code and executes that code. Compared to standard SQL-based queries, the Code Interpreter's use of Python enables more complex analysis and visualizations.</li>
+                    </ul>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Before you begin</h4>
+            </div>
+<!-- 
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-100">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Sample Document Title: Troubleshooting Common Issues</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        This section addresses frequently encountered issues and provides step-by-step solutions to resolve them quickly. If you're experiencing unexpected behavior or errors, please consult this guide before contacting support.
+                    </p>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Issue: API Key Invalid</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        **Symptom:** You receive a 401 Unauthorized error, or your requests are rejected. <br>
+                        **Solution:**
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Verify your API key for typos.</li>
+                            <li>Ensure your API key has the necessary permissions for the endpoint you are accessing.</li>
+                            <li>Check if your API key has expired.</li>
+                            <li>Confirm the `Authorization: Bearer YOUR_API_KEY` header is correctly formatted.</li>
+                        </ul>
+                    </p>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Issue: Data Not Updating</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        **Symptom:** You successfully submit data, but changes are not reflected immediately. <br>
+                        **Solution:**
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Check your network connection.</li>
+                            <li>Verify the request payload matches the required schema.</li>
+                            <li>Confirm the API response indicates a successful operation (e.g., HTTP 200 or 201 status).</li>
+                            <li>Allow for potential propagation delays (usually minimal).</li>
+                        </ul>
+                    </p>
+                </div>
+            </div> -->
         </section>
 
     </main>
