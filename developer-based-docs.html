@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray */
+            color: #334155; /* Slate-700 */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0; /* Gray-200 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8; /* Slate-400 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* Slate-500 */
+        }
+
+        /* Smooth scrolling for anchor links (still useful) */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 fixed w-full z-10 top-0">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600 hover:text-indigo-700 rounded-lg p-2 transition duration-300">My Portfolio</a>
+            <div class="flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20"> <!-- Padding to account for fixed header -->
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Developer based documentation samples</h2>
+            <p>Conversational Analytics is a chat-with-your-data feature that is powered by <a href="https://cloud.google.com/gemini/docs/overview">Gemini for Google Cloud</a>. Conversational Analytics empowers users with no expertise in business intelligence to go beyond static dashboards and ask data-related questions in regular, natural (conversational) language. Conversational Analytics is available in Looker (Google Cloud core), Looker (original) instances, and within Looker Studio as part of a Looker Studio Pro subscription.</p>
+            <p>The following sample conversation shows how a user can interact with Conversational Analytics in a natural, back-and-forth way. In this example, the user asks the following question: "Can you plot monthly sales of hot drinks versus smoothies for 2023, and highlight the top selling month for each type of drink?" Conversational Analytics responds by generating a line graph that displays the monthly sales of hot drinks and smoothies for 2023, highlighting July as the month with the highest sales for both categories.</p>
+            <p><img alt="Conversational Analytics chat that includes a line graph of monthly sales of hot drinks and smoothies in 2023, with July highlighted." class="screenshot" data-modal-dialog-id="ca-example-filled" src="/static/looker/docs/studio/images/ca-example-filled.png" width="400">
+            <devsite-lightbox id="ca-example-filled">
+            <img alt="Conversational Analytics chat that includes a line graph of monthly sales of hot drinks and smoothies in 2023, with July highlighted." src="/static/looker/docs/studio/images/ca-example-filled.png"/>s
+            </devsite-lightbox></img></p>
+            <p>As this sample conversation illustrates, Conversational Analytics interprets natural language requests, including multi-part questions that use common terms like "sales" and "hot drinks," without requiring users to specify exact database field names (like <code dir="ltr" translate="no">Total monthly drink sales</code>) or define filter conditions (like <code dir="ltr" translate="no">type of beverage = hot</code>). Conversational Analytics describes its key findings, explains its reasoning, and provides an answer that includes text and, where appropriate, a chart. To encourage deeper analysis, Conversational Analytics may also suggest follow-up questions.</p>
+            <p><a href="https://cloud.google.com/gemini/docs/discover/data-governance" track-metadata-end-goal="how-gemini-uses-data" track-metadata-position="body" track-name="dataGovernanceLink" track-type="commonIncludes">Learn how and when Gemini
+                for Google Cloud uses your data</a>.
+            As an early-stage technology, Gemini for Google Cloud products can
+            generate output that seems plausible but is factually incorrect. We recommend that you validate
+            all output from Gemini for Google Cloud products before you use it. For more
+            information, see
+            <a href="https://cloud.google.com/gemini/docs/discover/responsible-ai" track-metadata-end-goal="gemini-responsible-ai" track-metadata-position="body" track-name="raiLink" track-type="commonIncludes">Gemini for Google Cloud and responsible AI</a>.</p>
+            <h2 data-text="Key features" id="key-features" tabindex="-1">Key features</h2>
+            <p>Conversational Analytics includes the following key features:</p>
+            <ul>
+            <li><strong>Use Conversational Analytics in Looker</strong>: Access <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker">Conversational Analytics in Looker</a> to ask natural language questions about your Looker Explore data within a Looker (original) instance or a Looker (Google Cloud core) instance.</li>
+            <li><strong>Use Conversational Analytics in Looker Studio</strong>: Access <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker-studio">Conversational Analytics in Looker Studio</a> to ask natural language questions about data from <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-looker-studio#supported-data-sources">supported data sources</a>. Requires a Looker Studio Pro subscription.</li>
+            <li><strong>Create and converse with data agents</strong>: With <a href="https://cloud.google.com/looker/docs/studio/conversational-data-agents">data agents</a>, you can customize the AI-powered data querying agent by providing context and instructions that are specific to your data, which helps Conversational Analytics generate more accurate and contextually relevant responses.</li>
+            <li><strong>Enable advanced analytics with the Code Interpreter</strong>: The <a href="https://cloud.google.com/looker/docs/studio/conversational-analytics-code-interpreter">Code Interpreter</a> within Conversational Analytics translates your natural language questions into Python code and executes that code. Compared to standard SQL-based queries, the Code Interpreter's use of Python enables more complex analysis and visualizations.</li>
+            </ul>
+            <p><a name="before_you_begin"> </a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6 md:px-12 text-center">
+        <div class="container mx-auto">
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
